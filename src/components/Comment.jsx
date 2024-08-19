@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
 import { ThumbsUp, Trash } from 'phosphor-react';
-import styles from './Comment.module.css';
+import { useState } from 'react';
 import { Avatar } from './Avatar';
+import styles from './Comment.module.css';
 
-export function Comment({content, onDeleteComment}) {
+export function Comment({ content, onDeleteComment }) {
 
   const [likeCount, setLikeCount] = useState(0);
 
-  function handleDeleteComment(){
+  function handleDeleteComment() {
     onDeleteComment(content)
   }
 
-  function handleLikeComment(){
-    setLikeCount(likeCount+1);
+  function handleLikeComment() {
+    setLikeCount(state => state + 1);
   }
 
   return (

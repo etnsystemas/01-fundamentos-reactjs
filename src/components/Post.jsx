@@ -39,7 +39,7 @@ export function Post({author, publishedAt, content}) {
     setComments(commentsWithoutDeletedOne);
   }
 
-  function handleNewCommentIvalid(){
+  function handleNewCommentInvalid(){
     event.target.setCustomValidity('Este campo é obrigatório');
   }
 
@@ -76,7 +76,7 @@ export function Post({author, publishedAt, content}) {
             placeholder='Deixe um comentário' 
             value={newCommentText}
             onChange={handleNewCommentChange}  
-            onInvalid={handleNewCommentIvalid}
+            onInvalid={handleNewCommentInvalid}
             required
           />
         <footer>
